@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+
+{% block title %}Register - Drug Repurposing{% endblock %}
+
+{% block extra_css %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/auth.css' %}">
+<link rel="stylesheet" href="{% static 'css/register.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+    <div class="auth-card">
+        <div class="auth-logo-container">
+            <img src="{% static 'images/logo2p.png' %}" alt="Logo" class="auth-logo">
+        </div>
+        <h2>Create Account</h2>
+        <p style="margin-bottom: 0.25rem;">Join the Drug Repurposing Platform today</p>
+        <p style="font-size: 0.85rem; color: #0891b2; font-style: italic; margin-bottom: 1.5rem;">🚀 AI-powered breakthroughs from existing medicines</p>
+        
+        <form method="post" id="registerForm">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <label for="id_username">Username</label>
+                {{ form.username }}
+                {% if form.username.errors %}
+                <ul class="errorlist">
+                    {% for error in form.username.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                <p class="form-help">Choose a unique username</p>
+            </div>
+            
+            <div class="form-group">
+                <label for="id_email">Email Address</label>
+                {{ form.email }}
+                {% if form.email.errors %}
+                <ul class="errorlist">
+                    {% for error in form.email.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                <p class="form-help">Enter a valid email address</p>
+            </div>
+            
+            <div class="form-group">
+                <label for="id_password1">Password</label>
+                {{ form.password1 }}
+                {% if form.password1.errors %}
+                <ul class="errorlist">
+                    {% for error in form.password1.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                <div class="password-requirements">
+                    <p style="font-size: 0.8rem; color: #6b7280; margin-top: 0.25rem; margin-bottom: 0.25rem;">Password must contain:</p>
+                    <ul style="font-size: 0.75rem; color: #6b7280; margin: 0; padding-left: 1.25rem;">
+                        <li id="req-length">At least 8 characters</li>
+                        <li id="req-uppercase">One uppercase letter (A-Z)</li>
+                        <li id="req-lowercase">One lowercase letter (a-z)</li>
+                        <li id="req-number">One number (0-9)</li>
+                        <li id="req-special">One special character (!@#$%...)</li>
+                    </ul>
+                </div>
+                <div class="password-strength">
+                    <div class="password-strength-bar" id="strengthBar"></div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="id_password2">Confirm Password</label>
+                {{ form.password2 }}
+                {% if form.password2.errors %}
+                <ul class="errorlist">
+                    {% for error in form.password2.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                <p class="form-help" id="passwordMatch"></p>
+            </div>
+            
+            <button type="submit" class="btn">Create Account</button>
+        </form>
+        
+        <script>
+            // Password strength checker
+            const password1 = document.getElementById('id_password1');
+            const password2 = document.getElementById('id_password2');
+            const strengthBar = document.getElementById('strengthBar');
+            const matchText = document.getElementById('passwordMatch');
+            
+            password1.addEventListener('input', function() {
+                const value = this.value;
+                let strength = 0;
+                
+                // Check requirements
+                const hasLength = value.length >= 8;
+                const hasUpper = /[A-Z]/.test(value);
+                const hasLower = /[a-z]/.test(value);
+                const hasNumber = /[0-9]/.test(value);
+                const hasSpecial = /[!@#$%^&*(),.?":{}|<>]/.test(value);
+                
+                // Update requirement indicators
+                updateRequirement('req-length', hasLength);
+                updateRequirement('req-uppercase', hasUpper);
+                updateRequirement('req-lowercase', hasLower);
+                updateRequirement('req-number', hasNumber);
+                updateRequirement('req-special', hasSpecial);
+                
+                // Calculate strength
+                if (hasLength) strength++;
+                if (hasUpper) strength++;
+                if (hasLower) strength++;
+                if (hasNumber) strength++;
+                if (hasSpecial) strength++;
+                
+                // Update strength bar
+                strengthBar.className = 'password-strength-bar';
+                if (strength <= 2) {
+                    strengthBar.classList.add('weak');
+                } else if (strength <= 4) {
+                    strengthBar.classList.add('medium');
+                } else {
+                    strengthBar.classList.add('strong');
+                }
+            });
+            
+            password2.addEventListener('input', function() {
+                if (this.value === '') {
+                    matchText.textContent = '';
+                    matchText.style.color = '';
+                } else if (this.value === password1.value) {
+                    matchText.textContent = '✓ Passwords match';
+                    matchText.style.color = '#10b981';
+                } else {
+                    matchText.textContent = '✗ Passwords do not match';
+                    matchText.style.color = '#ef4444';
+                }
+            });
+            
+            function updateRequirement(id, met) {
+                const element = document.getElementById(id);
+                if (met) {
+                    element.style.color = '#10b981';
+                    element.style.fontWeight = '600';
+                } else {
+                    element.style.color = '#6b7280';
+                    element.style.fontWeight = '400';
+                }
+            }
+        </script>
+        
+        <div class="auth-footer">
+            <p>Already have an account? <a href="{% url 'login' %}">Sign in here</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}

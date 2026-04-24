@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}Login - Drug Repurposing{% endblock %}
+
+{% block extra_css %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/auth.css' %}">
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+    <div class="auth-card">
+        <div class="auth-logo-container">
+            <img src="{% static 'images/logo2p.png' %}" alt="Logo" class="auth-logo">
+        </div>
+        <h2>Welcome Back</h2>
+        <p style="margin-bottom: 0.5rem;">Sign in to continue to Drug Repurposing Platform</p>
+        <p style="font-size: 0.9rem; color: #3b82f6; font-style: italic; margin-bottom: 2rem;">✨ Rediscovering Medicines. Redefining Possibilities.</p>
+        
+        <form method="post">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <label for="id_username">Username</label>
+                {{ form.username }}
+            </div>
+            
+            <div class="form-group">
+                <label for="id_password">Password</label>
+                {{ form.password }}
+            </div>
+            
+            {% if form.errors %}
+            <div class="message error">
+                ❌ Invalid username or password. Please try again.
+            </div>
+            {% endif %}
+            
+            <button type="submit" class="btn">Sign In</button>
+        </form>
+        
+        <div class="auth-footer">
+            <p>Don't have an account? <a href="{% url 'register' %}">Create one now</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}

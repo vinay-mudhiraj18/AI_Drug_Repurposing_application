@@ -1,0 +1,36 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Molecular Structure Pattern -->
+  <g opacity="0.1">
+    <!-- Molecules -->
+    <circle cx="100" cy="100" r="30" fill="#2563eb"/>
+    <circle cx="200" cy="150" r="25" fill="#0891b2"/>
+    <circle cx="150" cy="250" r="28" fill="#f59e0b"/>
+    <circle cx="300" cy="200" r="32" fill="#2563eb"/>
+    
+    <circle cx="500" cy="120" r="27" fill="#0891b2"/>
+    <circle cx="600" cy="180" r="30" fill="#f59e0b"/>
+    <circle cx="550" cy="280" r="26" fill="#2563eb"/>
+    
+    <circle cx="900" cy="140" r="29" fill="#0891b2"/>
+    <circle cx="1000" cy="200" r="31" fill="#2563eb"/>
+    <circle cx="950" cy="300" r="28" fill="#f59e0b"/>
+    
+    <!-- Connections -->
+    <line x1="100" y1="100" x2="200" y2="150" stroke="#2563eb" stroke-width="2"/>
+    <line x1="200" y1="150" x2="150" y2="250" stroke="#0891b2" stroke-width="2"/>
+    <line x1="200" y1="150" x2="300" y2="200" stroke="#f59e0b" stroke-width="2"/>
+    
+    <line x1="500" y1="120" x2="600" y2="180" stroke="#2563eb" stroke-width="2"/>
+    <line x1="600" y1="180" x2="550" y2="280" stroke="#0891b2" stroke-width="2"/>
+    
+    <line x1="900" y1="140" x2="1000" y2="200" stroke="#f59e0b" stroke-width="2"/>
+    <line x1="1000" y1="200" x2="950" y2="300" stroke="#2563eb" stroke-width="2"/>
+    
+    <!-- DNA Helixes -->
+    <path d="M50 400 Q100 450, 50 500 Q0 550, 50 600" stroke="#2563eb" stroke-width="3" fill="none" opacity="0.5"/>
+    <path d="M150 400 Q100 450, 150 500 Q200 550, 150 600" stroke="#0891b2" stroke-width="3" fill="none" opacity="0.5"/>
+    
+    <path d="M700 350 Q750 400, 700 450 Q650 500, 700 550" stroke="#f59e0b" stroke-width="3" fill="none" opacity="0.5"/>
+    <path d="M800 350 Q750 400, 800 450 Q850 500, 800 550" stroke="#2563eb" stroke-width="3" fill="none" opacity="0.5"/>
+  </g>
+</svg>

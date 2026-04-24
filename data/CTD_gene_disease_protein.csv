@@ -1,0 +1,787 @@
+GeneSymbol,DiseaseName,UniProtID
+AKT1,Adenocarcinoma,P31749
+AKT1,Adenomatous Polyposis Coli,P31749
+AKT1,Amphetamine-Related Disorders,P31749
+AKT1,"Aortic Valve, Calcification of",P31749
+AKT1,Breast Neoplasms,P31749
+AKT1,Carcinogenesis,P31749
+AKT1,"Carcinoma, Hepatocellular",P31749
+AKT1,"Carcinoma, Squamous Cell",P31749
+AKT1,Cardiomegaly,P31749
+AKT1,Cardiomyopathies,P31749
+AKT1,Colorectal Neoplasms,P31749
+AKT1,COWDEN SYNDROME 6,P31749
+AKT1,"Diabetes Mellitus, Type 2",P31749
+AKT1,"Disease Models, Animal",P31749
+AKT1,Epilepsy,P31749
+AKT1,Fatty Liver,P31749
+AKT1,Fibrosis,P31749
+AKT1,Hepatomegaly,P31749
+AKT1,Hyperplasia,P31749
+AKT1,Hypertriglyceridemia,P31749
+AKT1,Inflammation,P31749
+AKT1,"Leukemia, Promyelocytic, Acute",P31749
+AKT1,Lung Neoplasms,P31749
+AKT1,"Lymphoma, T-Cell",P31749
+AKT1,Marijuana Abuse,P31749
+AKT1,Meningioma,P31749
+AKT1,Muscular Atrophy,P31749
+AKT1,Obesity,P31749
+AKT1,Ovarian Neoplasms,P31749
+AKT1,Pain,P31749
+AKT1,Precancerous Conditions,P31749
+AKT1,Prostatic Neoplasms,P31749
+AKT1,Proteus Syndrome,P31749
+AKT1,"Psychoses, Substance-Induced",P31749
+AKT1,Schizophrenia,P31749
+AKT1,Skin Neoplasms,P31749
+AKT1,Squamous Cell Carcinoma of Head and Neck,P31749
+AKT1,Urinary Bladder Neoplasms,P31749
+AKT1,"Ventricular Dysfunction, Left",P31749
+AKT1,Ventricular Remodeling,P31749
+AKT2,Adenocarcinoma,P31751
+AKT2,Breast Neoplasms,P31751
+AKT2,"Diabetes Mellitus, Type 2",P31751
+AKT2,HYPOINSULINEMIC HYPOGLYCEMIA WITH HEMIHYPERTROPHY,P31751
+AKT2,"Lipodystrophy, Familial Partial",P31751
+AKT2,Nasopharyngeal Carcinoma,P31751
+AKT2,Prostatic Neoplasms,P31751
+BRCA1,Breast Neoplasms,P38398
+BRCA1,"BREAST-OVARIAN CANCER, FAMILIAL, SUSCEPTIBILITY TO, 1",P38398
+BRCA1,Carcinoma,P38398
+BRCA1,"Carcinoma, Adenoid Cystic",P38398
+BRCA1,"Cell Transformation, Neoplastic",P38398
+BRCA1,Chromosome Breakage,P38398
+BRCA1,Hereditary Breast and Ovarian Cancer Syndrome,P38398
+BRCA1,"Mammary Neoplasms, Animal",P38398
+BRCA1,"Mammary Neoplasms, Experimental",P38398
+BRCA1,Mouth Diseases,P38398
+BRCA1,Neoplasms,P38398
+BRCA1,Ovarian Neoplasms,P38398
+BRCA1,Pancreatic Neoplasms,P38398
+BRCA1,Prostatic Neoplasms,P38398
+BRCA2,Breast Neoplasms,P51587
+BRCA2,"BREAST-OVARIAN CANCER, FAMILIAL, SUSCEPTIBILITY TO, 2",P51587
+BRCA2,"Fanconi Anemia, Complementation Group D1",P51587
+BRCA2,Glioma,P51587
+BRCA2,Hereditary Breast and Ovarian Cancer Syndrome,P51587
+BRCA2,Lung Neoplasms,P51587
+BRCA2,Medulloblastoma,P51587
+BRCA2,"Neoplasms, Squamous Cell",P51587
+BRCA2,Ovarian Neoplasms,P51587
+BRCA2,Pancreatic Neoplasms,P51587
+BRCA2,Prostatic Neoplasms,P51587
+BRCA2,Wilms Tumor,P51587
+CASP3,Acute Lung Injury,P42574
+CASP3,Alzheimer Disease,P42574
+CASP3,Brain Ischemia,P42574
+CASP3,Calcinosis,P42574
+CASP3,Cerebral Hemorrhage,P42574
+CASP3,"Colitis, Ulcerative",P42574
+CASP3,Copper-Overload Cirrhosis,P42574
+CASP3,Cryptorchidism,P42574
+CASP3,"Diabetes Mellitus, Experimental",P42574
+CASP3,"Diabetes Mellitus, Type 2",P42574
+CASP3,Diabetic Angiopathies,P42574
+CASP3,Diabetic Neuropathies,P42574
+CASP3,Diabetic Retinopathy,P42574
+CASP3,Edema,P42574
+CASP3,Heart Valve Diseases,P42574
+CASP3,"Hepatitis, Chronic",P42574
+CASP3,Mycoplasma Infections,P42574
+CASP3,Myocardial Infarction,P42574
+CASP3,Myocardial Reperfusion Injury,P42574
+CASP3,Nerve Degeneration,P42574
+CASP3,Nervous System Diseases,P42574
+CASP3,Neurotoxicity Syndromes,P42574
+CASP3,Reperfusion Injury,P42574
+CASP3,Retinal Detachment,P42574
+CASP3,Sepsis,P42574
+CASP3,Spinal Cord Injuries,P42574
+CASP3,Status Epilepticus,P42574
+CASP3,Subarachnoid Hemorrhage,P42574
+CASP8,Adenocarcinoma,Q14790
+CASP8,Autoimmune Lymphoproliferative Syndrome,Q14790
+CASP8,Breast Neoplasms,Q14790
+CASP8,"Carcinoma, Hepatocellular",Q14790
+CASP8,"Carcinoma, Non-Small-Cell Lung",Q14790
+CASP8,Cerebral Hemorrhage,Q14790
+CASP8,Colorectal Neoplasms,Q14790
+CASP8,"Dermatitis, Allergic Contact",Q14790
+CASP8,"Dermatitis, Contact",Q14790
+CASP8,"Diabetes Mellitus, Type 2",Q14790
+CASP8,Edema,Q14790
+CASP8,Esophageal Neoplasms,Q14790
+CASP8,Lung Neoplasms,Q14790
+CASP8,Melanoma,Q14790
+CASP8,Mitochondrial Diseases,Q14790
+CASP8,Myocardial Reperfusion Injury,Q14790
+CASP8,Papillomavirus Infections,Q14790
+CASP8,Precursor Cell Lymphoblastic Leukemia-Lymphoma,Q14790
+CASP8,"Prostate cancer, familial",Q14790
+CASP8,Reperfusion Injury,Q14790
+CASP8,Skin Neoplasms,Q14790
+CASP8,Squamous Cell Carcinoma of Head and Neck,Q14790
+CASP8,Status Epilepticus,Q14790
+CASP8,Stomach Neoplasms,Q14790
+CASP8,Uterine Cervical Neoplasms,Q14790
+EGFR,Acute Kidney Injury,P00533
+EGFR,Adenocarcinoma,P00533
+EGFR,Adenocarcinoma of Lung,P00533
+EGFR,Adenomatous Polyposis Coli,P00533
+EGFR,Adrenocortical Carcinoma,P00533
+EGFR,"Arthritis, Experimental",P00533
+EGFR,Bile Duct Neoplasms,P00533
+EGFR,Breast Neoplasms,P00533
+EGFR,Carcinoma,P00533
+EGFR,"Carcinoma, Hepatocellular",P00533
+EGFR,"Carcinoma, Non-Small-Cell Lung",P00533
+EGFR,"Carcinoma, Squamous Cell",P00533
+EGFR,"Cardiomyopathy, Dilated",P00533
+EGFR,Chloracne,P00533
+EGFR,Cholangiocarcinoma,P00533
+EGFR,Colonic Neoplasms,P00533
+EGFR,Colorectal Neoplasms,P00533
+EGFR,Craniofacial Abnormalities,P00533
+EGFR,Dermatitis,P00533
+EGFR,"Diabetes Mellitus, Type 2",P00533
+EGFR,Disease Progression,P00533
+EGFR,Endometriosis,P00533
+EGFR,Esophageal Neoplasms,P00533
+EGFR,Esophageal Squamous Cell Carcinoma,P00533
+EGFR,Gallbladder Neoplasms,P00533
+EGFR,Glioblastoma,P00533
+EGFR,Head and Neck Neoplasms,P00533
+EGFR,Insulin Resistance,P00533
+EGFR,Leiomyoma,P00533
+EGFR,Lung Neoplasms,P00533
+EGFR,"Mammary Neoplasms, Animal",P00533
+EGFR,"Mammary Neoplasms, Experimental",P00533
+EGFR,Mesothelioma,P00533
+EGFR,"Mesothelioma, Malignant",P00533
+EGFR,Nasopharyngeal Neoplasms,P00533
+EGFR,NEONATAL NEPHROCUTANEOUS INFLAMMATORY SYNDROME,P00533
+EGFR,Neoplasm Invasiveness,P00533
+EGFR,Neoplasm Metastasis,P00533
+EGFR,"Neoplasm Recurrence, Local",P00533
+EGFR,Osteosarcoma,P00533
+EGFR,Ovarian Neoplasms,P00533
+EGFR,Pancreatic Neoplasms,P00533
+EGFR,Papilloma,P00533
+EGFR,"Polycystic Kidney, Autosomal Recessive",P00533
+EGFR,Prostatic Neoplasms,P00533
+EGFR,Rectal Neoplasms,P00533
+EGFR,Small Cell Lung Carcinoma,P00533
+EGFR,Stomach Neoplasms,P00533
+EGFR,Urinary Bladder Neoplasms,P00533
+EGFR,Uterine Cervical Neoplasms,P00533
+HIF1A,Anaplasia,Q16665
+HIF1A,Astrocytoma,Q16665
+HIF1A,Brain Ischemia,Q16665
+HIF1A,Breast Neoplasms,Q16665
+HIF1A,Carcinoma,Q16665
+HIF1A,"Carcinoma, Ductal",Q16665
+HIF1A,"Carcinoma, Intraductal, Noninfiltrating",Q16665
+HIF1A,"Carcinoma, Non-Small-Cell Lung",Q16665
+HIF1A,Cardiomegaly,Q16665
+HIF1A,"Cell Transformation, Neoplastic",Q16665
+HIF1A,"Cholangitis, Sclerosing",Q16665
+HIF1A,Diabetes Complications,Q16665
+HIF1A,Disease Progression,Q16665
+HIF1A,Esophageal Squamous Cell Carcinoma,Q16665
+HIF1A,Glioblastoma,Q16665
+HIF1A,"Heart Defects, Congenital",Q16665
+HIF1A,Heart Failure,Q16665
+HIF1A,Hemangioblastoma,Q16665
+HIF1A,Hyperplasia,Q16665
+HIF1A,Hypertension,Q16665
+HIF1A,"Hypertension, Pulmonary",Q16665
+HIF1A,"Hypoxia-Ischemia, Brain",Q16665
+HIF1A,Idiopathic Pulmonary Fibrosis,Q16665
+HIF1A,Liver Cirrhosis,Q16665
+HIF1A,"Liver Cirrhosis, Biliary",Q16665
+HIF1A,Lung Diseases,Q16665
+HIF1A,"Micronuclei, Chromosome-Defective",Q16665
+HIF1A,Myocardial Reperfusion Injury,Q16665
+HIF1A,Neoplasm Invasiveness,Q16665
+HIF1A,"Neoplasms, Experimental",Q16665
+HIF1A,Pancreatic Neoplasms,Q16665
+HIF1A,Prostatic Neoplasms,Q16665
+HIF1A,"Pulmonary Disease, Chronic Obstructive",Q16665
+HIF1A,"Radiation Injuries, Experimental",Q16665
+HIF1A,Skin Neoplasms,Q16665
+HIF1A,Spinal Cord Injuries,Q16665
+HIF1A,Thyroid Neoplasms,Q16665
+HIF1A,Urinary Bladder Neoplasms,Q16665
+HIF1A,Venous Thrombosis,Q16665
+IGF1,"Abortion, Spontaneous",P05019
+IGF1,Acromegaly,P05019
+IGF1,Acute Kidney Injury,P05019
+IGF1,Adenoma,P05019
+IGF1,Alzheimer Disease,P05019
+IGF1,Autistic Disorder,P05019
+IGF1,"Bone Diseases, Metabolic",P05019
+IGF1,Breast Neoplasms,P05019
+IGF1,Cachexia,P05019
+IGF1,"Carcinoma, Hepatocellular",P05019
+IGF1,Cardiomegaly,P05019
+IGF1,Chemical and Drug Induced Liver Injury,P05019
+IGF1,Cholestasis,P05019
+IGF1,Colitis,P05019
+IGF1,Corneal Diseases,P05019
+IGF1,Crohn Disease,P05019
+IGF1,Demyelinating Diseases,P05019
+IGF1,Desbuquois syndrome,P05019
+IGF1,"Diabetes Mellitus, Experimental",P05019
+IGF1,"Diabetes Mellitus, Type 1",P05019
+IGF1,Diabetic Cardiomyopathies,P05019
+IGF1,Drug-Related Side Effects and Adverse Reactions,P05019
+IGF1,Endometriosis,P05019
+IGF1,Female Urogenital Diseases,P05019
+IGF1,"Hernia, Diaphragmatic",P05019
+IGF1,Hyperalgesia,P05019
+IGF1,Hypertension,P05019
+IGF1,"Infarction, Middle Cerebral Artery",P05019
+IGF1,Insulin-Like Growth Factor I Deficiency,P05019
+IGF1,Kidney Diseases,P05019
+IGF1,"Kidney Failure, Chronic",P05019
+IGF1,Learning Disabilities,P05019
+IGF1,Liver Cirrhosis,P05019
+IGF1,"Liver Cirrhosis, Experimental",P05019
+IGF1,"Mammary Neoplasms, Experimental",P05019
+IGF1,Memory Disorders,P05019
+IGF1,Movement Disorders,P05019
+IGF1,Muscular Atrophy,P05019
+IGF1,Myocardial Ischemia,P05019
+IGF1,Neoplasm Invasiveness,P05019
+IGF1,Neoplasm Metastasis,P05019
+IGF1,Nerve Degeneration,P05019
+IGF1,Neurodevelopmental Disorders,P05019
+IGF1,Peripheral Nervous System Diseases,P05019
+IGF1,Pituitary Neoplasms,P05019
+IGF1,Prostatic Neoplasms,P05019
+IGF1,"Puberty, Precocious",P05019
+IGF1,Pulmonary Fibrosis,P05019
+IGF1,Skin Neoplasms,P05019
+IGF1,Squamous Cell Carcinoma of Head and Neck,P05019
+IGF1,Urinary Bladder Neoplasms,P05019
+INS,Acute Kidney Injury,P01308
+INS,Albuminuria,P01308
+INS,Alzheimer Disease,P01308
+INS,Bipolar Disorder,P01308
+INS,"Cardiomyopathy, Hypertrophic",P01308
+INS,Diabetes Mellitus,P01308
+INS,"Diabetes Mellitus, Insulin-Dependent, 2",P01308
+INS,"Diabetes Mellitus, Type 1",P01308
+INS,"Diabetes Mellitus, Type 2",P01308
+INS,Diabetic Cardiomyopathies,P01308
+INS,Diabetic Ketoacidosis,P01308
+INS,Diabetic Nephropathies,P01308
+INS,Edema,P01308
+INS,Fatty Liver,P01308
+INS,Glucose Intolerance,P01308
+INS,Heart Arrest,P01308
+INS,Heart Failure,P01308
+INS,Hepatitis,P01308
+INS,Hyperglycemia,P01308
+INS,Hyperinsulinism,P01308
+INS,Hyperkalemia,P01308
+INS,Hyperproinsulinemia,P01308
+INS,Hypertension,P01308
+INS,Hypertriglyceridemia,P01308
+INS,Hypoglycemia,P01308
+INS,Hypokalemia,P01308
+INS,Hypotension,P01308
+INS,Insulin Resistance,P01308
+INS,"Kidney Diseases, Cystic",P01308
+INS,Lewy Body Disease,P01308
+INS,"Liver Cirrhosis, Experimental",P01308
+INS,Liver Diseases,P01308
+INS,"Liver Failure, Acute",P01308
+INS,"MATURITY-ONSET DIABETES OF THE YOUNG, TYPE 10",P01308
+INS,Memory Disorders,P01308
+INS,Metabolic Diseases,P01308
+INS,Metabolic Syndrome,P01308
+INS,"Micronuclei, Chromosome-Defective",P01308
+INS,MPTP Poisoning,P01308
+INS,Muscular Diseases,P01308
+INS,Neoplasm Invasiveness,P01308
+INS,Neural Tube Defects,P01308
+INS,Neurocognitive Disorders,P01308
+INS,Non-alcoholic Fatty Liver Disease,P01308
+INS,Obesity,P01308
+INS,Pancreatitis,P01308
+INS,Panic Disorder,P01308
+INS,Paralysis,P01308
+INS,Paresthesia,P01308
+INS,Parkinson Disease,P01308
+INS,Polycystic Ovary Syndrome,P01308
+INS,Prostatic Neoplasms,P01308
+INS,Renal Insufficiency,P01308
+INS,Rhabdomyolysis,P01308
+INS,Seizures,P01308
+INS,Tachycardia,P01308
+INS,Telomeric 22q13 Monosomy Syndrome,P01308
+INS,Urinary Bladder Diseases,P01308
+INS,"Ventricular Dysfunction, Left",P01308
+INS,Ventricular Fibrillation,P01308
+INS,Ventricular Outflow Obstruction,P01308
+INS,Weight Loss,P01308
+MAPK1,"Arthritis, Juvenile",P28482
+MAPK1,Brain Ischemia,P28482
+MAPK1,"Carcinoma, Squamous Cell",P28482
+MAPK1,Cardiomyopathies,P28482
+MAPK1,"Ceroid Lipofuscinosis, Neuronal, 6",P28482
+MAPK1,"Cholestasis, Extrahepatic",P28482
+MAPK1,Cocaine-Related Disorders,P28482
+MAPK1,Coronavirus Infections,P28482
+MAPK1,Desbuquois syndrome,P28482
+MAPK1,"Disease Models, Animal",P28482
+MAPK1,Gliosis,P28482
+MAPK1,Head and Neck Neoplasms,P28482
+MAPK1,Hodgkin Disease,P28482
+MAPK1,Hyperalgesia,P28482
+MAPK1,Hypertrophy,P28482
+MAPK1,"Infertility, Female",P28482
+MAPK1,Kidney Neoplasms,P28482
+MAPK1,"Liver Neoplasms, Experimental",P28482
+MAPK1,Lung Neoplasms,P28482
+MAPK1,Neoplasm Invasiveness,P28482
+MAPK1,Neoplasm Metastasis,P28482
+MAPK1,Nerve Degeneration,P28482
+MAPK1,Ovarian Neoplasms,P28482
+MAPK1,"Pneumonia, Pneumococcal",P28482
+MAPK1,"Radiation Injuries, Experimental",P28482
+MAPK1,Sepsis,P28482
+MAPK1,Severe Acute Respiratory Syndrome,P28482
+MAPK1,Sezary Syndrome,P28482
+MAPK1,Stomach Neoplasms,P28482
+MAPK1,Substance Withdrawal Syndrome,P28482
+MAPK1,Thyroid Neoplasms,P28482
+MAPK1,Trigeminal Neuralgia,P28482
+MAPK14,Cardiomyopathies,Q16539
+MAPK14,Cholestasis,Q16539
+MAPK14,"Cholestasis, Extrahepatic",Q16539
+MAPK14,Hepatic Insufficiency,Q16539
+MAPK14,Hepatomegaly,Q16539
+MAPK14,"Leukemia, Myelogenous, Chronic, BCR-ABL Positive",Q16539
+MAPK14,"Liver Cirrhosis, Biliary",Q16539
+MAPK14,Liver Neoplasms,Q16539
+MAPK14,Lung Neoplasms,Q16539
+MAPK14,Myocardial Ischemia,Q16539
+MAPK14,Pulmonary Edema,Q16539
+MAPK3,Atrophy,P27361
+MAPK3,Autistic Disorder,P27361
+MAPK3,Brain Ischemia,P27361
+MAPK3,"Carcinoma, Squamous Cell",P27361
+MAPK3,Cardiomyopathies,P27361
+MAPK3,"Ceroid Lipofuscinosis, Neuronal, 6",P27361
+MAPK3,"Cholestasis, Extrahepatic",P27361
+MAPK3,Cocaine-Related Disorders,P27361
+MAPK3,Coronavirus Infections,P27361
+MAPK3,Developmental Disabilities,P27361
+MAPK3,"Disease Models, Animal",P27361
+MAPK3,Gliosis,P27361
+MAPK3,Head and Neck Neoplasms,P27361
+MAPK3,Hyperalgesia,P27361
+MAPK3,Hypertrophy,P27361
+MAPK3,"Infertility, Female",P27361
+MAPK3,Kidney Neoplasms,P27361
+MAPK3,"Liver Neoplasms, Experimental",P27361
+MAPK3,Lung Neoplasms,P27361
+MAPK3,Neoplasm Invasiveness,P27361
+MAPK3,Neoplasm Metastasis,P27361
+MAPK3,Nerve Degeneration,P27361
+MAPK3,Ovarian Neoplasms,P27361
+MAPK3,"Pneumonia, Pneumococcal",P27361
+MAPK3,Prostatic Neoplasms,P27361
+MAPK3,"Radiation Injuries, Experimental",P27361
+MAPK3,Sepsis,P27361
+MAPK3,Severe Acute Respiratory Syndrome,P27361
+MAPK3,Stomach Neoplasms,P27361
+MAPK3,Substance Withdrawal Syndrome,P27361
+MAPK3,Trigeminal Neuralgia,P27361
+SLC31A1,Congenital Abnormalities,Q6PRD1
+SLC31A1,Embryo Loss,Q6PRD1
+SLC31A1,"Hypertension, Pulmonary",Q6PRD1
+SLC31A1,Intellectual Disability,Q6PRD1
+SLC31A1,"Liver Neoplasms, Experimental",Q6PRD1
+SLC31A1,Manganese Poisoning,Q6PRD1
+SLC31A1,Necrosis,Q6PRD1
+SLC31A1,Prostatic Neoplasms,Q6PRD1
+STAT1,"Arthritis, Experimental",P42224
+STAT1,"Arthritis, Rheumatoid",P42224
+STAT1,"Candidiasis, Chronic Mucocutaneous",P42224
+STAT1,"Carcinoma, Hepatocellular",P42224
+STAT1,Cytomegalovirus Infections,P42224
+STAT1,Disease Progression,P42224
+STAT1,Hearing Loss,P42224
+STAT1,IMMUNODEFICIENCY 31A,P42224
+STAT1,IMMUNODEFICIENCY 31B,P42224
+STAT1,IMMUNODEFICIENCY 31C,P42224
+STAT1,"Influenza, Human",P42224
+STAT1,Liver Cirrhosis,P42224
+STAT1,Lupus Nephritis,P42224
+STAT1,Mycobacterium Infections,P42224
+STAT1,Neoplasm Metastasis,P42224
+STAT1,Precursor T-Cell Lymphoblastic Leukemia-Lymphoma,P42224
+STAT3,Adenocarcinoma,P40763
+STAT3,"Arthritis, Experimental",P40763
+STAT3,"Arthritis, Juvenile",P40763
+STAT3,Atherosclerosis,P40763
+STAT3,Atrophy,P40763
+STAT3,"AUTOIMMUNE DISEASE, MULTISYSTEM, INFANTILE-ONSET, 1",P40763
+STAT3,Autoimmune Diseases,P40763
+STAT3,Brain Ischemia,P40763
+STAT3,Breast Neoplasms,P40763
+STAT3,Carcinoma,P40763
+STAT3,"Carcinoma, Non-Small-Cell Lung",P40763
+STAT3,"Carcinoma, Squamous Cell",P40763
+STAT3,Cardiomegaly,P40763
+STAT3,Cardiomyopathies,P40763
+STAT3,"Cell Transformation, Neoplastic",P40763
+STAT3,Chemical and Drug Induced Liver Injury,P40763
+STAT3,"Colitis, Ulcerative",P40763
+STAT3,Colonic Neoplasms,P40763
+STAT3,Copper-Overload Cirrhosis,P40763
+STAT3,Desbuquois syndrome,P40763
+STAT3,"Diabetes Mellitus, Type 1",P40763
+STAT3,"Disease Models, Animal",P40763
+STAT3,Fever,P40763
+STAT3,Fibrosis,P40763
+STAT3,Heart Failure,P40763
+STAT3,"Hepatitis, Chronic",P40763
+STAT3,"Hernias, Diaphragmatic, Congenital",P40763
+STAT3,"Hyper-Ige Recurrent Infection Syndrome, Autosomal Dominant",P40763
+STAT3,Idiopathic Pulmonary Fibrosis,P40763
+STAT3,"Infarction, Middle Cerebral Artery",P40763
+STAT3,Inflammation,P40763
+STAT3,Job Syndrome,P40763
+STAT3,"Leukemia-Lymphoma, Adult T-Cell",P40763
+STAT3,"Leukemia, Myeloid, Acute",P40763
+STAT3,"Leukemia, T-Cell",P40763
+STAT3,Liver Neoplasms,P40763
+STAT3,"Liver Neoplasms, Experimental",P40763
+STAT3,Lung Neoplasms,P40763
+STAT3,Lymphatic Metastasis,P40763
+STAT3,"Lymphoma, Large-Cell, Anaplastic",P40763
+STAT3,"Lymphoma, T-Cell",P40763
+STAT3,"Mammary Neoplasms, Animal",P40763
+STAT3,"Mammary Neoplasms, Experimental",P40763
+STAT3,Medulloblastoma,P40763
+STAT3,Memory Disorders,P40763
+STAT3,Neoplasm Invasiveness,P40763
+STAT3,Neoplasm Metastasis,P40763
+STAT3,"Neoplasms, Experimental",P40763
+STAT3,Ovarian Neoplasms,P40763
+STAT3,Pancreatic Neoplasms,P40763
+STAT3,Precancerous Conditions,P40763
+STAT3,Precursor B-Cell Lymphoblastic Leukemia-Lymphoma,P40763
+STAT3,Prostatic Neoplasms,P40763
+STAT3,Psoriasis,P40763
+STAT3,Pulmonary Fibrosis,P40763
+STAT3,Reperfusion Injury,P40763
+STAT3,Squamous Cell Carcinoma of Head and Neck,P40763
+STAT3,Stomach Neoplasms,P40763
+STAT3,Urinary Bladder Neoplasms,P40763
+STAT3,Uterine Cervical Neoplasms,P40763
+TCF7L2,Adenocarcinoma,Q9NQB0
+TCF7L2,"Arthritis, Juvenile",Q9NQB0
+TCF7L2,"Cardiomyopathy, Dilated",Q9NQB0
+TCF7L2,Colonic Neoplasms,Q9NQB0
+TCF7L2,Colorectal Neoplasms,Q9NQB0
+TCF7L2,Coronary Disease,Q9NQB0
+TCF7L2,"Diabetes Mellitus, Type 2",Q9NQB0
+TCF7L2,"Disease Models, Animal",Q9NQB0
+TCF7L2,Hyperalgesia,Q9NQB0
+TCF7L2,Hyperplasia,Q9NQB0
+TCF7L2,Myocardial Ischemia,Q9NQB0
+TCF7L2,Neurodevelopmental Disorders,Q9NQB0
+TCF7L2,"Prostate cancer, familial",Q9NQB0
+TCF7L2,Ventricular Remodeling,Q9NQB0
+TNF,Acquired Hyperostosis Syndrome,P01375
+TNF,Acute Coronary Syndrome,P01375
+TNF,Acute Kidney Injury,P01375
+TNF,Acute Lung Injury,P01375
+TNF,Adenocarcinoma,P01375
+TNF,Albuminuria,P01375
+TNF,Alzheimer Disease,P01375
+TNF,Amyotrophic lateral sclerosis 1,P01375
+TNF,Anemia,P01375
+TNF,"Anemia, Refractory",P01375
+TNF,"Anemia, Sickle Cell",P01375
+TNF,"Angina, Stable",P01375
+TNF,Anorexia,P01375
+TNF,Anthracosis,P01375
+TNF,Anxiety Disorders,P01375
+TNF,Arsenic Poisoning,P01375
+TNF,"Arthritis, Experimental",P01375
+TNF,"Arthritis, Infectious",P01375
+TNF,"Arthritis, Psoriatic",P01375
+TNF,"Arthritis, Rheumatoid",P01375
+TNF,Asbestosis,P01375
+TNF,Asthma,P01375
+TNF,"Asthma, Occupational",P01375
+TNF,Atherosclerosis,P01375
+TNF,Berylliosis,P01375
+TNF,Brain Edema,P01375
+TNF,Brain Injuries,P01375
+TNF,"Brain Injuries, Traumatic",P01375
+TNF,Brain Ischemia,P01375
+TNF,Breast Neoplasms,P01375
+TNF,Bronchiectasis,P01375
+TNF,Burns,P01375
+TNF,Cachexia,P01375
+TNF,Calcinosis,P01375
+TNF,"Carcinoma, Hepatocellular",P01375
+TNF,"Carcinoma, Transitional Cell",P01375
+TNF,Cardiomegaly,P01375
+TNF,Cardiomyopathies,P01375
+TNF,Cardiotoxicity,P01375
+TNF,Cardiovirus Infections,P01375
+TNF,Chemical and Drug Induced Liver Injury,P01375
+TNF,Chemically-Induced Disorders,P01375
+TNF,Chlamydia Infections,P01375
+TNF,Cholestasis,P01375
+TNF,"Cholestasis, Extrahepatic",P01375
+TNF,Colitis,P01375
+TNF,"Colitis, Ulcerative",P01375
+TNF,Colonic Neoplasms,P01375
+TNF,Colorectal Neoplasms,P01375
+TNF,Coronary Restenosis,P01375
+TNF,COVID-19,P01375
+TNF,Coxsackievirus Infections,P01375
+TNF,Crohn Disease,P01375
+TNF,"Dermatitis, Allergic Contact",P01375
+TNF,Dermatomyositis,P01375
+TNF,Desmoid Tumors,P01375
+TNF,"Diabetes Mellitus, Experimental",P01375
+TNF,"Diabetes Mellitus, Type 1",P01375
+TNF,"Diabetes Mellitus, Type 2",P01375
+TNF,Diabetic Cardiomyopathies,P01375
+TNF,"Disease Models, Animal",P01375
+TNF,Disease Progression,P01375
+TNF,Drug Eruptions,P01375
+TNF,Drug Hypersensitivity,P01375
+TNF,Drug-Related Side Effects and Adverse Reactions,P01375
+TNF,Edema,P01375
+TNF,Essential Hypertension,P01375
+TNF,Fanconi Anemia,P01375
+TNF,Fatty Liver,P01375
+TNF,Fever,P01375
+TNF,Fibrosis,P01375
+TNF,Glioma,P01375
+TNF,Glomerulonephritis,P01375
+TNF,Heart Arrest,P01375
+TNF,Heart Failure,P01375
+TNF,Heat Stroke,P01375
+TNF,Hemochromatosis,P01375
+TNF,Hemolytic-Uremic Syndrome,P01375
+TNF,Hepatic Encephalopathy,P01375
+TNF,Hepatitis,P01375
+TNF,"Hepatitis, Alcoholic",P01375
+TNF,Hepatolenticular Degeneration,P01375
+TNF,"Hernia, Diaphragmatic",P01375
+TNF,HIV Wasting Syndrome,P01375
+TNF,Hyperalgesia,P01375
+TNF,Hyperbilirubinemia,P01375
+TNF,Hypercalcemia,P01375
+TNF,Hyperhomocysteinemia,P01375
+TNF,Hyperinsulinism,P01375
+TNF,Hypersensitivity,P01375
+TNF,Hypertension,P01375
+TNF,"Hypertension, Pulmonary",P01375
+TNF,Hypoglycemia,P01375
+TNF,Hypotension,P01375
+TNF,Hypothermia,P01375
+TNF,Idiopathic Pulmonary Fibrosis,P01375
+TNF,Infections,P01375
+TNF,Inflammation,P01375
+TNF,Inflammatory Bowel Diseases,P01375
+TNF,Insulin Resistance,P01375
+TNF,Intervertebral Disc Degeneration,P01375
+TNF,Intrahepatic Cholestasis of Pregnancy,P01375
+TNF,"Kidney Failure, Chronic",P01375
+TNF,Leishmaniasis,P01375
+TNF,"Leishmaniasis, Cutaneous",P01375
+TNF,"Leishmaniasis, Visceral",P01375
+TNF,Listeriosis,P01375
+TNF,Liver Cirrhosis,P01375
+TNF,"Liver Cirrhosis, Alcoholic",P01375
+TNF,"Liver Cirrhosis, Experimental",P01375
+TNF,Liver Diseases,P01375
+TNF,"Liver Failure, Acute",P01375
+TNF,Liver Neoplasms,P01375
+TNF,"Liver Neoplasms, Experimental",P01375
+TNF,Lung Diseases,P01375
+TNF,Lung Injury,P01375
+TNF,Lung Neoplasms,P01375
+TNF,Malaria,P01375
+TNF,Manganese Poisoning,P01375
+TNF,Melanoma,P01375
+TNF,"Micronuclei, Chromosome-Defective",P01375
+TNF,"MIGRAINE WITH OR WITHOUT AURA, SUSCEPTIBILITY TO, 1",P01375
+TNF,Mitochondrial Myopathies,P01375
+TNF,Multiple Organ Failure,P01375
+TNF,Muscular Atrophy,P01375
+TNF,Myocardial Infarction,P01375
+TNF,Myocardial Ischemia,P01375
+TNF,Myocardial Stunning,P01375
+TNF,Myocarditis,P01375
+TNF,Nausea,P01375
+TNF,Necrosis,P01375
+TNF,Neoplasm Invasiveness,P01375
+TNF,Neoplasm Metastasis,P01375
+TNF,"Neoplasms, Experimental",P01375
+TNF,Nerve Degeneration,P01375
+TNF,Nervous System Diseases,P01375
+TNF,Neuralgia,P01375
+TNF,Neuroblastoma,P01375
+TNF,Neurogenic Inflammation,P01375
+TNF,Neuroinflammatory Diseases,P01375
+TNF,Non-alcoholic Fatty Liver Disease,P01375
+TNF,Obesity,P01375
+TNF,Oral Submucous Fibrosis,P01375
+TNF,"Osteoarthritis, Spine",P01375
+TNF,Osteolysis,P01375
+TNF,"Osteoporosis, Postmenopausal",P01375
+TNF,Pain,P01375
+TNF,Pancreatic Neoplasms,P01375
+TNF,Parkinson Disease,P01375
+TNF,Placenta Diseases,P01375
+TNF,Pleural Effusion,P01375
+TNF,Pleurisy,P01375
+TNF,Pneumonia,P01375
+TNF,Polymyositis,P01375
+TNF,"Pregnancy Complications, Cardiovascular",P01375
+TNF,Premature Birth,P01375
+TNF,Psoriasis,P01375
+TNF,"Pulmonary Disease, Chronic Obstructive",P01375
+TNF,Pulmonary Edema,P01375
+TNF,Pulmonary Emphysema,P01375
+TNF,Pulmonary Fibrosis,P01375
+TNF,"Radiation Injuries, Experimental",P01375
+TNF,Reperfusion Injury,P01375
+TNF,Respiratory Hypersensitivity,P01375
+TNF,Respiratory Tract Diseases,P01375
+TNF,Retinal Diseases,P01375
+TNF,Sarcoma,P01375
+TNF,Schizophrenia,P01375
+TNF,"Scleroderma, Localized",P01375
+TNF,Sepsis,P01375
+TNF,"Shock, Hemorrhagic",P01375
+TNF,"Shock, Septic",P01375
+TNF,Skin Diseases,P01375
+TNF,Soft Tissue Neoplasms,P01375
+TNF,Spinal Cord Compression,P01375
+TNF,Status Epilepticus,P01375
+TNF,Stomach Neoplasms,P01375
+TNF,Stomach Ulcer,P01375
+TNF,Stroke,P01375
+TNF,Subarachnoid Hemorrhage,P01375
+TNF,Tachycardia,P01375
+TNF,Thrombosis,P01375
+TNF,Thyroid Neoplasms,P01375
+TNF,Trigeminal Neuralgia,P01375
+TNF,Urinary Bladder Neoplasms,P01375
+TNF,Urticaria,P01375
+TNF,Vascular Diseases,P01375
+TNF,Vascular System Injuries,P01375
+TNF,Venous Thromboembolism,P01375
+TNF,Ventricular Dysfunction,P01375
+TNF,Vitiligo,P01375
+TNF,Weight Gain,P01375
+TNF,Wounds and Injuries,P01375
+TP53,Acquired Hyperostosis Syndrome,P04637
+TP53,Acute erythroleukemia,P04637
+TP53,Acute Kidney Injury,P04637
+TP53,Adenocarcinoma,P04637
+TP53,"Adenocarcinoma, Clear Cell",P04637
+TP53,Adenocarcinoma Of Esophagus,P04637
+TP53,Adenoma,P04637
+TP53,Adrenal Gland Neoplasms,P04637
+TP53,Adrenocortical Carcinoma,P04637
+TP53,"Adrenocortical Carcinoma, Hereditary",P04637
+TP53,Amyotrophic Lateral Sclerosis,P04637
+TP53,"Aortic Valve, Calcification of",P04637
+TP53,Arsenic Poisoning,P04637
+TP53,Balkan Nephropathy,P04637
+TP53,Brain Ischemia,P04637
+TP53,Breast Neoplasms,P04637
+TP53,Calcinosis,P04637
+TP53,Carcinoma,P04637
+TP53,"Carcinoma, Adenoid Cystic",P04637
+TP53,"Carcinoma, Basal Cell",P04637
+TP53,"Carcinoma, Ductal",P04637
+TP53,"Carcinoma, Hepatocellular",P04637
+TP53,"Carcinoma, Non-Small-Cell Lung",P04637
+TP53,"Carcinoma, Ovarian Epithelial",P04637
+TP53,"Carcinoma, Renal Cell",P04637
+TP53,"Carcinoma, Small Cell",P04637
+TP53,"Carcinoma, Squamous Cell",P04637
+TP53,"Carcinoma, Transitional Cell",P04637
+TP53,Cardiomyopathies,P04637
+TP53,"Cardiomyopathy, Hypertrophic",P04637
+TP53,Cardiotoxicity,P04637
+TP53,Carotid Artery Diseases,P04637
+TP53,"Cell Transformation, Neoplastic",P04637
+TP53,Central Nervous System Neoplasms,P04637
+TP53,Cholangiocarcinoma,P04637
+TP53,Chromosome 17 deletion,P04637
+TP53,Colonic Neoplasms,P04637
+TP53,Colorectal Neoplasms,P04637
+TP53,Demyelinating Diseases,P04637
+TP53,"Diabetes Mellitus, Experimental",P04637
+TP53,Disease Progression,P04637
+TP53,Emphysema,P04637
+TP53,Esophageal Neoplasms,P04637
+TP53,Esophageal Squamous Cell Carcinoma,P04637
+TP53,Gallbladder Neoplasms,P04637
+TP53,Glioma,P04637
+TP53,Hemangiosarcoma,P04637
+TP53,Hypertension,P04637
+TP53,"Infertility, Female",P04637
+TP53,"Infertility, Male",P04637
+TP53,Ischemia,P04637
+TP53,Keratosis,P04637
+TP53,"Leukemia, Lymphocytic, Chronic, B-Cell",P04637
+TP53,"Leukemia, Megakaryoblastic, of Down Syndrome",P04637
+TP53,Li-Fraumeni Syndrome,P04637
+TP53,"Liver Diseases, Parasitic",P04637
+TP53,Liver Neoplasms,P04637
+TP53,"Liver Neoplasms, Experimental",P04637
+TP53,Lung Neoplasms,P04637
+TP53,"Lymphoma, T-Cell",P04637
+TP53,"Lymphoma, T-Cell, Cutaneous",P04637
+TP53,Melanoma,P04637
+TP53,"Mesothelioma, Malignant",P04637
+TP53,Mitochondrial Diseases,P04637
+TP53,Mouth Neoplasms,P04637
+TP53,Myelodysplastic Syndromes,P04637
+TP53,Myeloproliferative Disorders,P04637
+TP53,Nasopharyngeal Carcinoma,P04637
+TP53,Neoplasm Metastasis,P04637
+TP53,Osteosarcoma,P04637
+TP53,Ovarian Neoplasms,P04637
+TP53,Pancreatic Neoplasms,P04637
+TP53,"Papilloma, Choroid Plexus",P04637
+TP53,Penile Neoplasms,P04637
+TP53,Polyploidy,P04637
+TP53,Precursor Cell Lymphoblastic Leukemia-Lymphoma,P04637
+TP53,Prostatic Neoplasms,P04637
+TP53,Psoriasis,P04637
+TP53,"Pulmonary Disease, Chronic Obstructive",P04637
+TP53,Sarcoma,P04637
+TP53,Schizophrenia,P04637
+TP53,Sezary Syndrome,P04637
+TP53,Skin Neoplasms,P04637
+TP53,Small Cell Lung Carcinoma,P04637
+TP53,Squamous Cell Carcinoma of Head and Neck,P04637
+TP53,Stomach Neoplasms,P04637
+TP53,Thymoma,P04637
+TP53,Thyroid Neoplasms,P04637
+TP53,Urinary Bladder Neoplasms,P04637
+TP53,Urogenital Neoplasms,P04637
+TP53,Urologic Neoplasms,P04637
+TP53,Vulvar Lichen Sclerosus,P04637
+TP53,Wilms Tumor,P04637

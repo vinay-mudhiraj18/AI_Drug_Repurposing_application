@@ -1,0 +1,202 @@
+/* Login Page - Dark Blue Theme */
+
+/* Animated Background Gradient - Dark Blue/Black */
+.auth-container {
+    background: linear-gradient(-45deg, #0f172a, #1e293b, #334155, #1e40af);
+    background-size: 400% 400%;
+    animation: darkGradient 20s ease infinite;
+    position: relative;
+}
+
+@keyframes darkGradient {
+    0% { 
+        background-position: 0% 50%;
+    }
+    50% { 
+        background-position: 100% 50%;
+    }
+    100% { 
+        background-position: 0% 50%;
+    }
+}
+
+/* Floating DNA Helixes */
+.auth-container::after {
+    content: '🧬 🧬 🧬 🧬 🧬 🧬 🧬 🧬 🧬 🧬 🧬 🧬';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    font-size: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0.1;
+    animation: dnaSpiral 25s linear infinite;
+    pointer-events: none;
+    letter-spacing: 5rem;
+    line-height: 10rem;
+}
+
+@keyframes dnaSpiral {
+    0% { 
+        transform: translateY(0) rotate(0deg) scale(1);
+        opacity: 0.1;
+    }
+    50% { 
+        transform: translateY(-30px) rotate(180deg) scale(1.1);
+        opacity: 0.2;
+    }
+    100% {
+        transform: translateY(0) rotate(360deg) scale(1);
+        opacity: 0.1;
+    }
+}
+
+/* Login Card with Glass Effect */
+.auth-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    box-shadow: 0 25px 70px rgba(59, 130, 246, 0.3);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.auth-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+    animation: cardGlow 8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes cardGlow {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translate(10%, 10%) scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+.auth-card:hover {
+    box-shadow: 0 30px 80px rgba(59, 130, 246, 0.4);
+    transform: translateY(-8px) scale(1.01);
+    border-color: rgba(59, 130, 246, 0.5);
+}
+
+/* Logo Pulse Animation */
+.auth-card img {
+    animation: logoPulse 3s ease-in-out infinite;
+}
+
+@keyframes logoPulse {
+    0%, 100% {
+        transform: scale(1);
+        filter: drop-shadow(0 4px 12px rgba(59, 130, 246, 0.3));
+    }
+    50% {
+        transform: scale(1.05);
+        filter: drop-shadow(0 8px 20px rgba(59, 130, 246, 0.5));
+    }
+}
+
+/* Heading Gradient - Blue */
+.auth-card h2 {
+    background: linear-gradient(135deg, #3b82f6, #60a5fa, #93c5fd);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: textShine 3s ease infinite;
+}
+
+@keyframes textShine {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Input Focus Effect - Blue Glow */
+.form-group input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2), 0 0 20px rgba(59, 130, 246, 0.3);
+    background: #ffffff;
+}
+
+/* Button Gradient - Blue */
+.btn {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    box-shadow: 0 6px 25px rgba(59, 130, 246, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Link Color - Blue */
+.auth-footer a {
+    color: #3b82f6;
+    position: relative;
+}
+
+.auth-footer a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #3b82f6, #60a5fa);
+    transition: width 0.3s ease;
+}
+
+.auth-footer a:hover::after {
+    width: 100%;
+}
+
+.auth-footer a:hover {
+    color: #2563eb;
+}
+
+/* Slogan Color - Blue */
+.auth-card p[style*="color"] {
+    color: #3b82f6 !important;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .auth-container::after {
+        font-size: 2rem;
+        letter-spacing: 3rem;
+        line-height: 6rem;
+    }
+}

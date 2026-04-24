@@ -1,0 +1,292 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Drug Repurposing{% endblock %}
+
+{% block extra_css %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="page-header">
+        <h2>🔬 Drug Repurposing Prediction</h2>
+        <p style="margin-bottom: 0.5rem;">Discover therapeutic relationships between drugs, proteins, and diseases</p>
+        <p style="font-size: 1rem; color: #3b82f6; font-weight: 600; font-style: italic;">💡 Smarter pathways. Better treatments.</p>
+    </div>
+    
+    <!-- Query Type Guide -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+        <div style="text-align: center; padding: 1.5rem; background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(59, 130, 246, 0.06)); border-radius: 14px; border: 2px solid rgba(59, 130, 246, 0.3); box-shadow: 0 4px 15px rgba(59, 130, 246, 0.1);">
+            <img src="{% static 'images/drug-icon.svg' %}" alt="Drug" style="width: 48px; height: 48px; margin: 0 auto 0.75rem;">
+            <h4 style="color: #3b82f6; margin-bottom: 0.5rem; font-size: 1rem;">💊 Drug Query</h4>
+            <p style="font-size: 0.85rem; color: #64748b; line-height: 1.4;">Find diseases & proteins related to a drug</p>
+        </div>
+        <div style="text-align: center; padding: 1.5rem; background: linear-gradient(135deg, rgba(6, 182, 212, 0.12), rgba(6, 182, 212, 0.06)); border-radius: 14px; border: 2px solid rgba(6, 182, 212, 0.3); box-shadow: 0 4px 15px rgba(6, 182, 212, 0.1);">
+            <img src="{% static 'images/protein-icon.svg' %}" alt="Protein" style="width: 48px; height: 48px; margin: 0 auto 0.75rem;">
+            <h4 style="color: #06b6d4; margin-bottom: 0.5rem; font-size: 1rem;">🧬 Protein Query</h4>
+            <p style="font-size: 0.85rem; color: #64748b; line-height: 1.4;">Discover drugs & diseases linked to a protein</p>
+        </div>
+        <div style="text-align: center; padding: 1.5rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(16, 185, 129, 0.06)); border-radius: 14px; border: 2px solid rgba(16, 185, 129, 0.3); box-shadow: 0 4px 15px rgba(16, 185, 129, 0.1);">
+            <img src="{% static 'images/disease-icon.svg' %}" alt="Disease" style="width: 48px; height: 48px; margin: 0 auto 0.75rem;">
+            <h4 style="color: #10b981; margin-bottom: 0.5rem; font-size: 1rem;">🦠 Disease Query</h4>
+            <p style="font-size: 0.85rem; color: #64748b; line-height: 1.4;">Explore drugs & proteins for a disease</p>
+        </div>
+    </div>
+    
+    <div class="prediction-form">
+        <form method="post">
+            {% csrf_token %}
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="query_type">Query Type</label>
+                    <div style="position: relative;">
+                        <select name="query_type" id="query_type" required style="padding-left: 3rem;">
+                            <option value="">Select type...</option>
+                            <option value="drug" {% if query_type == 'drug' %}selected{% endif %}>💊 Drug</option>
+                            <option value="protein" {% if query_type == 'protein' %}selected{% endif %}>🧬 Protein</option>
+                            <option value="disease" {% if query_type == 'disease' %}selected{% endif %}>🦠 Disease</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="query_value">Search Value</label>
+                    <input type="text" name="query_value" id="query_value" 
+                           placeholder="e.g., Aspirin, P31749, Diabetes" 
+                           value="{{ query_value|default:'' }}" required>
+                </div>
+            </div>
+            
+            <button type="submit" class="btn">🔍 Predict Relationships</button>
+        </form>
+    </div>
+</div>
+
+{% if results %}
+<div class="card">
+    <div style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(6, 182, 212, 0.15)); padding: 1.25rem; border-radius: 12px; margin-bottom: 1.5rem; text-align: center; border: 1px solid rgba(59, 130, 246, 0.2); box-shadow: 0 4px 15px rgba(59, 130, 246, 0.1);">
+        <p style="font-size: 1rem; color: #3b82f6; font-weight: 600; font-style: italic; margin: 0;">
+            💡 Turning forgotten drugs into life-saving solutions
+        </p>
+    </div>
+    
+    <div class="results-header">
+        <h3>🎯 Prediction Results</h3>
+        <span class="results-badge">{{ results.query_type|title }}: {{ results.query_value }}</span>
+    </div>
+    
+    {% if results.error %}
+    <div class="message error">❌ {{ results.error }}</div>
+    {% else %}
+        {% if query_type != 'disease' %}
+        <div class="section-title">🦠 Related Diseases</div>
+        {% if results.predictions.diseases %}
+        <p class="section-subtitle">Found {{ results.predictions.diseases|length }} disease(s)</p>
+        {% if results.predictions.message %}
+        <div class="results-info">
+            ℹ️ {{ results.predictions.message }}
+        </div>
+        {% endif %}
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 80px;">Rank</th>
+                    <th>Disease Name</th>
+                    <th>Evidence</th>
+                    {% if query_type == 'drug' %}
+                    <th>Source</th>
+                    <th style="width: 150px;">Confidence</th>
+                    {% elif query_type == 'protein' %}
+                    <th>Gene Symbol</th>
+                    {% endif %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for disease in results.predictions.diseases %}
+                <tr {% if disease.rank == 1 %}class="therapeutic"{% endif %}>
+                    <td class="rank-badge">
+                        {% if disease.rank == 1 %}🥇
+                        {% elif disease.rank == 2 %}🥈
+                        {% elif disease.rank == 3 %}🥉
+                        {% else %}{{ disease.rank }}{% endif %}
+                    </td>
+                    <td><strong>{{ disease.disease_name }}</strong></td>
+                    <td>{{ disease.evidence }}</td>
+                    {% if query_type == 'drug' %}
+                    <td><span class="source-badge {% if disease.source == 'Therapeutic' %}therapeutic{% else %}protein-linked{% endif %}">{{ disease.source }}</span></td>
+                    <td>
+                        <div class="confidence-bar">
+                            <span class="confidence-value">{{ disease.percentage|default:"N/A" }}%</span>
+                        </div>
+                    </td>
+                    {% elif query_type == 'protein' %}
+                    <td>{{ disease.gene }}</td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <div class="empty-state">
+            <div class="empty-state-icon">🔍</div>
+            <h4>No Disease Connections Found</h4>
+            <p>No disease relationships were found in the dataset</p>
+            <p style="font-size: 0.85rem; color: #0891b2; font-style: italic; margin-top: 1rem;">Keep exploring - every search brings us closer to discovery</p>
+        </div>
+        {% endif %}
+        {% endif %}
+        
+        {% if query_type != 'protein' %}
+        <div class="section-title">🧬 Related Proteins</div>
+        {% if results.predictions.proteins %}
+        <p class="section-subtitle">Found {{ results.predictions.proteins|length }} protein(s)</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Protein (UniProt ID)</th>
+                    <th>Gene Symbol</th>
+                    {% if query_type == 'drug' %}
+                    <th>Activity Type</th>
+                    <th>Activity Value</th>
+                    {% endif %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for protein in results.predictions.proteins %}
+                <tr>
+                    <td><strong>{{ protein.protein }}</strong></td>
+                    <td>{{ protein.gene|default:"N/A" }}</td>
+                    {% if query_type == 'drug' %}
+                    <td>{{ protein.activity_type }}</td>
+                    <td>{{ protein.activity_value }}</td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <div class="empty-state">
+            <div class="empty-state-icon">🔍</div>
+            <h4>No Protein Connections Found</h4>
+            <p>No protein relationships were found in the dataset</p>
+            <p style="font-size: 0.85rem; color: #0891b2; font-style: italic; margin-top: 1rem;">Every molecule holds potential</p>
+        </div>
+        {% endif %}
+        {% endif %}
+        
+        {% if query_type != 'drug' %}
+        <div class="section-title">💊 Related Drugs</div>
+        {% if results.predictions.drugs %}
+        <p class="section-subtitle">Found {{ results.predictions.drugs|length }} drug(s)</p>
+        {% if results.predictions.message %}
+        <div class="results-info">
+            ℹ️ {{ results.predictions.message }}
+        </div>
+        {% endif %}
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 80px;">Rank</th>
+                    <th>Drug Name</th>
+                    {% if query_type == 'disease' %}
+                    <th>Evidence</th>
+                    <th>Source</th>
+                    <th style="width: 150px;">Confidence</th>
+                    {% else %}
+                    <th>Activity Type</th>
+                    <th>Activity Value</th>
+                    {% endif %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for drug in results.predictions.drugs %}
+                <tr {% if drug.rank == 1 %}class="therapeutic"{% endif %}>
+                    <td class="rank-badge">
+                        {% if drug.rank == 1 %}🥇
+                        {% elif drug.rank == 2 %}🥈
+                        {% elif drug.rank == 3 %}🥉
+                        {% else %}{{ drug.rank }}{% endif %}
+                    </td>
+                    <td><strong>{{ drug.drug_name }}</strong></td>
+                    {% if query_type == 'disease' %}
+                    <td>{{ drug.evidence }}</td>
+                    <td><span class="source-badge {% if drug.source == 'Therapeutic' %}therapeutic{% else %}protein-linked{% endif %}">{{ drug.source }}</span></td>
+                    <td>
+                        <div class="confidence-bar">
+                            <span class="confidence-value">{{ drug.percentage|default:"N/A" }}%</span>
+                        </div>
+                    </td>
+                    {% else %}
+                    <td>{{ drug.activity_type }}</td>
+                    <td>{{ drug.activity_value }}</td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <div class="empty-state">
+            <div class="empty-state-icon">🔍</div>
+            <h4>No Drug Connections Found</h4>
+            <p>No drug relationships were found in the dataset</p>
+            <p style="font-size: 0.85rem; color: #0891b2; font-style: italic; margin-top: 1rem;">The next breakthrough is just a search away</p>
+        </div>
+        {% endif %}
+        {% endif %}
+    {% endif %}
+</div>
+{% endif %}
+
+{% if recent_history %}
+<div class="card">
+    <div class="section-title">📜 Recent Searches</div>
+    <p class="section-subtitle">Click on any search to view results again</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Query</th>
+                <th>Date</th>
+                <th style="width: 120px;">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for history in recent_history %}
+            <tr class="history-row" style="cursor: pointer;">
+                <td><span class="query-type-badge {{ history.query_type }}">{{ history.query_type|title }}</span></td>
+                <td><strong>{{ history.query_value }}</strong></td>
+                <td class="timestamp">{{ history.updated_at|date:"Y-m-d H:i" }}</td>
+                <td>
+                    <form method="post" style="display: inline;">
+                        {% csrf_token %}
+                        <input type="hidden" name="query_type" value="{{ history.query_type }}">
+                        <input type="hidden" name="query_value" value="{{ history.query_value }}">
+                        <button type="submit" class="btn" style="padding: 0.5rem 1rem; font-size: 0.85rem;">
+                            🔄 View
+                        </button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<script>
+    // Make entire row clickable
+    document.querySelectorAll('.history-row').forEach(row => {
+        row.addEventListener('click', function(e) {
+            // Don't trigger if clicking the button directly
+            if (e.target.tagName !== 'BUTTON') {
+                const button = this.querySelector('button');
+                if (button) {
+                    button.click();
+                }
+            }
+        });
+    });
+</script>
+{% endif %}
+{% endblock %}

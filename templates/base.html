@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Drug Repurposing{% endblock %}</title>
+    {% load static %}
+    <link rel="icon" type="image/svg+xml" href="{% static 'images/favicon.svg' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    {% if user.is_authenticated %}
+    <div class="navbar">
+        <div class="navbar-content">
+            <div style="display: flex; align-items: center; gap: 1.5rem;">
+                <div style="display: flex; align-items: center; justify-content: center; min-width: 120px;">
+                    <img src="{% static 'images/logo1p.png' %}" alt="Logo" class="navbar-logo">
+                </div>
+                <div>
+                    <h1>Drug Repurposing</h1>
+                    <p style="font-size: 0.85rem; color: #6b7280; margin-top: 0.25rem; font-style: italic;">Where data meets discovery</p>
+                </div>
+            </div>
+            <nav>
+                <a href="{% url 'home' %}">Home</a>
+                {% if user.is_superuser %}
+                <a href="{% url 'admin_dashboard' %}">Admin Dashboard</a>
+                {% endif %}
+                <span style="color: #2563eb;">Welcome, {{ user.username }}</span>
+                <a href="{% url 'logout' %}" class="logout-btn btn">Logout</a>
+            </nav>
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="container">
+        {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+            <div class="message {{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% block content %}{% endblock %}
+    </div>
+    
+    {% if user.is_authenticated %}
+    <footer style="text-align: center; padding: 2rem 1rem; color: rgba(255,255,255,0.9); font-size: 0.9rem;">
+        <p style="font-style: italic; margin-bottom: 1rem; font-size: 1rem;">
+            {% cycle "🧬 Hidden cures, revealed by intelligence" "💊 AI that gives old drugs new purpose" "🔬 Transforming molecules into new hope" "🎯 Turning forgotten drugs into life-saving solutions" "✨ Repurpose. Reinvent. Heal." %}
+        </p>
+        
+        <div style="margin-bottom: 1rem; padding: 1rem; background: rgba(255, 255, 255, 0.1); border-radius: 10px; display: inline-block;">
+            <p style="font-size: 0.95rem; margin-bottom: 0.5rem; font-weight: 600;">📧 Contact Us</p>
+            <p style="font-size: 0.85rem; margin-bottom: 0.25rem;">
+                <span style="opacity: 0.9;">Email:</span> 
+                <a href="mailto:beesaboinavinay@gmail.com" style="color: #60a5fa; text-decoration: none; font-weight: 500;">beesaboinavinay@gmail.com</a>
+            </p>
+            <p style="font-size: 0.85rem; opacity: 0.9;">
+                <span>Phone:</span> +91 913397199X
+            </p>
+            <p style="font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.7; font-style: italic;">For queries and support</p>
+        </div>
+        
+        <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 1rem;">© 2025 Drug Repurposing Platform. All rights reserved.</p>
+    </footer>
+    {% endif %}
+    
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

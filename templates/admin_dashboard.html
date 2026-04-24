@@ -1,0 +1,431 @@
+{% extends 'base.html' %}
+
+{% block title %}Admin Dashboard - Drug Repurposing{% endblock %}
+
+{% block extra_css %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/admin.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="dashboard-header">
+        <h2>📊 Admin Dashboard</h2>
+        <p style="margin-bottom: 0.5rem;">Monitor platform activity and user statistics</p>
+        <p style="font-size: 1rem; color: #2563eb; font-weight: 600; font-style: italic;">🔬 Rewriting the future of medicine</p>
+    </div>
+    
+    <div class="stats-grid">
+        <a href="?view=users" class="stat-card primary {% if view_filter == 'users' %}active{% endif %}" style="text-decoration: none; color: inherit;">
+            <div class="stat-icon">👥</div>
+            <div class="stat-value">{{ total_users }}</div>
+            <div class="stat-label">Total Users</div>
+            <div class="stat-action">Click to view →</div>
+        </a>
+        
+        <a href="?view=all_predictions" class="stat-card secondary {% if view_filter == 'all_predictions' %}active{% endif %}" style="text-decoration: none; color: inherit;">
+            <div class="stat-icon">🎯</div>
+            <div class="stat-value">{{ total_predictions }}</div>
+            <div class="stat-label">Total Predictions</div>
+            <div class="stat-action">Click to view →</div>
+        </a>
+        
+        <a href="?view=drug" class="stat-card {% if view_filter == 'drug' %}active{% endif %}" style="text-decoration: none; color: inherit;">
+            <div class="stat-icon">💊</div>
+            <div class="stat-value">{{ stats.drug }}</div>
+            <div class="stat-label">Drug Queries</div>
+            <div class="stat-action">Click to view →</div>
+        </a>
+        
+        <a href="?view=protein" class="stat-card {% if view_filter == 'protein' %}active{% endif %}" style="text-decoration: none; color: inherit;">
+            <div class="stat-icon">🧬</div>
+            <div class="stat-value">{{ stats.protein }}</div>
+            <div class="stat-label">Protein Queries</div>
+            <div class="stat-action">Click to view →</div>
+        </a>
+        
+        <a href="?view=disease" class="stat-card {% if view_filter == 'disease' %}active{% endif %}" style="text-decoration: none; color: inherit;">
+            <div class="stat-icon">🦠</div>
+            <div class="stat-value">{{ stats.disease }}</div>
+            <div class="stat-label">Disease Queries</div>
+            <div class="stat-action">Click to view →</div>
+        </a>
+    </div>
+</div>
+
+<!-- Query Distribution Chart -->
+{% if not view_filter %}
+<div class="card">
+    <div class="chart-section">
+        <div class="chart-header">
+            <h3>📊 Query Distribution</h3>
+            <p style="color: #6b7280; font-size: 0.9rem; margin-bottom: 1.5rem;">Breakdown of prediction queries by type</p>
+        </div>
+        
+        <div class="chart-container">
+            <div class="chart-wrapper">
+                <canvas id="queryChart" width="400" height="400"></canvas>
+            </div>
+            <div class="chart-legend">
+                <div class="legend-item">
+                    <div class="legend-color drug"></div>
+                    <span>💊 Drug Queries</span>
+                    <strong>{{ stats.drug }}</strong>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color protein"></div>
+                    <span>🧬 Protein Queries</span>
+                    <strong>{{ stats.protein }}</strong>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color disease"></div>
+                    <span>🦠 Disease Queries</span>
+                    <strong>{{ stats.disease }}</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<div class="card">
+    <div class="activity-section">
+        <div class="activity-header">
+            {% if view_filter == 'users' %}
+            <h3>👥 All Users</h3>
+            <a href="{% url 'admin_dashboard' %}" class="btn-back">← Back to Dashboard</a>
+            {% elif view_filter == 'all_predictions' %}
+            <h3>🎯 All Predictions</h3>
+            <a href="{% url 'admin_dashboard' %}" class="btn-back">← Back to Dashboard</a>
+            {% elif view_filter == 'drug' %}
+            <h3>💊 Drug Queries</h3>
+            <a href="{% url 'admin_dashboard' %}" class="btn-back">← Back to Dashboard</a>
+            {% elif view_filter == 'protein' %}
+            <h3>🧬 Protein Queries</h3>
+            <a href="{% url 'admin_dashboard' %}" class="btn-back">← Back to Dashboard</a>
+            {% elif view_filter == 'disease' %}
+            <h3>🦠 Disease Queries</h3>
+            <a href="{% url 'admin_dashboard' %}" class="btn-back">← Back to Dashboard</a>
+            {% else %}
+            <h3>📜 Recent Activity</h3>
+            {% endif %}
+        </div>
+        
+        <div class="admin-table">
+            {% if view_filter == 'users' %}
+            <!-- Users List -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Date Joined</th>
+                        <th>Last Login</th>
+                        <th>Predictions</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users_list %}
+                    <tr>
+                        <td>
+                            <div class="user-badge">
+                                <div class="user-avatar">{{ user.username|slice:":1"|upper }}</div>
+                                <span>{{ user.username }}</span>
+                            </div>
+                        </td>
+                        <td>{{ user.email|default:"N/A" }}</td>
+                        <td class="timestamp">{{ user.date_joined|date:"Y-m-d H:i" }}</td>
+                        <td class="timestamp">{{ user.last_login|date:"Y-m-d H:i"|default:"Never" }}</td>
+                        <td><strong>{{ user.predictionhistory_set.count }}</strong></td>
+                        <td>
+                            {% if user.is_superuser %}
+                            <span class="status-badge admin">Admin</span>
+                            {% elif user.is_active %}
+                            <span class="status-badge active">Active</span>
+                            {% else %}
+                            <span class="status-badge inactive">Inactive</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="6">
+                            <div class="empty-state">
+                                <div class="empty-state-icon">👥</div>
+                                <h4>No Users Found</h4>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            
+            {% elif view_filter == 'all_predictions' or view_filter == 'drug' or view_filter == 'protein' or view_filter == 'disease' %}
+            <!-- Filtered Predictions List -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Query Type</th>
+                        <th>Query Value</th>
+                        <th>Last Updated</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if view_filter == 'all_predictions' %}
+                        {% for prediction in all_predictions %}
+                        <tr>
+                            <td>
+                                <div class="user-badge">
+                                    <div class="user-avatar">{{ prediction.user.username|slice:":1"|upper }}</div>
+                                    <span>{{ prediction.user.username }}</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="query-type-badge {{ prediction.query_type }}">
+                                    {% if prediction.query_type == 'drug' %}💊{% elif prediction.query_type == 'protein' %}🧬{% else %}🦠{% endif %}
+                                    {{ prediction.query_type|title }}
+                                </span>
+                            </td>
+                            <td><strong>{{ prediction.query_value }}</strong></td>
+                            <td class="timestamp">{{ prediction.updated_at|date:"Y-m-d H:i:s" }}</td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="4">
+                                <div class="empty-state">
+                                    <div class="empty-state-icon">📭</div>
+                                    <h4>No Predictions Found</h4>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    {% else %}
+                        {% for prediction in filtered_predictions %}
+                        <tr>
+                            <td>
+                                <div class="user-badge">
+                                    <div class="user-avatar">{{ prediction.user.username|slice:":1"|upper }}</div>
+                                    <span>{{ prediction.user.username }}</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="query-type-badge {{ prediction.query_type }}">
+                                    {% if prediction.query_type == 'drug' %}💊{% elif prediction.query_type == 'protein' %}🧬{% else %}🦠{% endif %}
+                                    {{ prediction.query_type|title }}
+                                </span>
+                            </td>
+                            <td><strong>{{ prediction.query_value }}</strong></td>
+                            <td class="timestamp">{{ prediction.updated_at|date:"Y-m-d H:i:s" }}</td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="4">
+                                <div class="empty-state">
+                                    <div class="empty-state-icon">📭</div>
+                                    <h4>No {{ view_filter|title }} Queries Found</h4>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    {% endif %}
+                </tbody>
+            </table>
+            
+            {% else %}
+            <!-- Default Recent Activity -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Query Type</th>
+                        <th>Query Value</th>
+                        <th>Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for prediction in recent_predictions %}
+                    <tr>
+                        <td>
+                            <div class="user-badge">
+                                <div class="user-avatar">{{ prediction.user.username|slice:":1"|upper }}</div>
+                                <span>{{ prediction.user.username }}</span>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="query-type-badge {{ prediction.query_type }}">
+                                {% if prediction.query_type == 'drug' %}💊{% elif prediction.query_type == 'protein' %}🧬{% else %}🦠{% endif %}
+                                {{ prediction.query_type|title }}
+                            </span>
+                        </td>
+                        <td><strong>{{ prediction.query_value }}</strong></td>
+                        <td class="timestamp">{{ prediction.updated_at|date:"Y-m-d H:i:s" }}</td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="4">
+                            <div class="empty-state">
+                                <div class="empty-state-icon">📭</div>
+                                <h4>No Activity Yet</h4>
+                                <p>Predictions will appear here once users start making queries</p>
+                                <p style="font-size: 0.85rem; color: #0891b2; font-style: italic; margin-top: 1rem;">🌟 Building the future of medicine, one discovery at a time</p>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<!-- Chart.js Library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+{% if not view_filter %}
+<script>
+// Query Distribution Pie Chart
+const ctx = document.getElementById('queryChart').getContext('2d');
+
+// Data from Django template
+const chartData = {
+    drug: {{ stats.drug }},
+    protein: {{ stats.protein }},
+    disease: {{ stats.disease }}
+};
+
+// Calculate total for percentages
+const total = chartData.drug + chartData.protein + chartData.disease;
+
+// Create the chart
+const queryChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: ['💊 Drug Queries', '🧬 Protein Queries', '🦠 Disease Queries'],
+        datasets: [{
+            data: [chartData.drug, chartData.protein, chartData.disease],
+            backgroundColor: [
+                '#3b82f6', // Blue for drugs
+                '#06b6d4', // Cyan for proteins  
+                '#10b981'  // Green for diseases
+            ],
+            borderColor: [
+                '#3b82f6',
+                '#06b6d4', 
+                '#10b981'
+            ],
+            hoverBackgroundColor: [
+                '#2563eb', // Darker blue on hover
+                '#0891b2', // Darker cyan on hover
+                '#059669'  // Darker green on hover
+            ],
+            borderWidth: 3,
+            hoverBorderWidth: 5,
+            hoverOffset: 10
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false // We'll use custom legend
+            },
+            tooltip: {
+                backgroundColor: 'rgba(15, 23, 42, 0.95)',
+                titleColor: '#e2e8f0',
+                bodyColor: '#e2e8f0',
+                borderColor: '#3b82f6',
+                borderWidth: 1,
+                cornerRadius: 8,
+                displayColors: true,
+                callbacks: {
+                    label: function(context) {
+                        const value = context.parsed;
+                        const percentage = total > 0 ? ((value / total) * 100).toFixed(1) : 0;
+                        return `${context.label}: ${value} (${percentage}%)`;
+                    }
+                }
+            }
+        },
+        animation: {
+            animateRotate: true,
+            animateScale: true,
+            duration: 1500,
+            easing: 'easeOutCubic'
+        },
+        cutout: '60%', // Makes it a doughnut chart
+        elements: {
+            arc: {
+                borderRadius: 8
+            }
+        }
+    }
+});
+
+// Add hover effects to legend items
+document.querySelectorAll('.legend-item').forEach((item, index) => {
+    item.addEventListener('mouseenter', () => {
+        queryChart.setActiveElements([{datasetIndex: 0, index: index}]);
+        queryChart.update('none');
+    });
+    
+    item.addEventListener('mouseleave', () => {
+        queryChart.setActiveElements([]);
+        queryChart.update('none');
+    });
+    
+    item.addEventListener('click', () => {
+        const meta = queryChart.getDatasetMeta(0);
+        meta.data[index].hidden = !meta.data[index].hidden;
+        queryChart.update();
+    });
+});
+
+// Add center text showing total
+const centerText = {
+    id: 'centerText',
+    beforeDatasetsDraw(chart, args, options) {
+        const { ctx, data } = chart;
+        ctx.save();
+        
+        const centerX = chart.getDatasetMeta(0).data[0].x;
+        const centerY = chart.getDatasetMeta(0).data[0].y;
+        
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        
+        // Total number
+        ctx.font = 'bold 2rem Inter, sans-serif';
+        ctx.fillStyle = '#1e293b';
+        ctx.fillText(total, centerX, centerY - 10);
+        
+        // Label
+        ctx.font = '0.9rem Inter, sans-serif';
+        ctx.fillStyle = '#6b7280';
+        ctx.fillText('Total Queries', centerX, centerY + 20);
+        
+        ctx.restore();
+    }
+};
+
+queryChart.register(centerText);
+
+// Animate chart on scroll (if visible)
+const chartContainer = document.querySelector('.chart-container');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            queryChart.update('active');
+        }
+    });
+});
+
+observer.observe(chartContainer);
+</script>
+{% endif %}
+{% endblock %}

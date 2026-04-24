@@ -1,0 +1,29 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Protein Structure -->
+  <path d="M20 32 Q32 20, 44 32 Q32 44, 20 32" fill="url(#proteinGrad)" opacity="0.3"/>
+  
+  <!-- Helix -->
+  <path d="M16 16 Q24 24, 16 32 Q8 40, 16 48" stroke="url(#proteinGrad)" stroke-width="3" fill="none"/>
+  <path d="M48 16 Q40 24, 48 32 Q56 40, 48 48" stroke="url(#proteinGrad)" stroke-width="3" fill="none"/>
+  
+  <!-- Connection Points -->
+  <circle cx="16" cy="20" r="3" fill="#2563eb"/>
+  <circle cx="48" cy="20" r="3" fill="#0891b2"/>
+  <circle cx="16" cy="32" r="3" fill="#f59e0b"/>
+  <circle cx="48" cy="32" r="3" fill="#2563eb"/>
+  <circle cx="16" cy="44" r="3" fill="#0891b2"/>
+  <circle cx="48" cy="44" r="3" fill="#f59e0b"/>
+  
+  <!-- Bonds -->
+  <line x1="16" y1="20" x2="48" y2="20" stroke="#2563eb" stroke-width="1.5" opacity="0.5"/>
+  <line x1="16" y1="32" x2="48" y2="32" stroke="#0891b2" stroke-width="1.5" opacity="0.5"/>
+  <line x1="16" y1="44" x2="48" y2="44" stroke="#f59e0b" stroke-width="1.5" opacity="0.5"/>
+  
+  <defs>
+    <linearGradient id="proteinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb"/>
+      <stop offset="50%" style="stop-color:#0891b2"/>
+      <stop offset="100%" style="stop-color:#f59e0b"/>
+    </linearGradient>
+  </defs>
+</svg>
